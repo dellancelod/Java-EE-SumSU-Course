@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/JavaEE_LW1.iml" filepath="$PROJECT_DIR$/JavaEE_LW1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaEE.iml" filepath="$PROJECT_DIR$/JavaEE.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LW2/LW2.iml" filepath="$PROJECT_DIR$/LW2/LW2.iml" />
     </modules>
   </component>
 </project>
