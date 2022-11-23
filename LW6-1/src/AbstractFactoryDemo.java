@@ -10,7 +10,7 @@ public class AbstractFactoryDemo {
 
         character.addBonuses();
         character.talk();
-        
+
         character = new Character("Player 2", ClassAbstractFactory.getClass("Rogue"));
         character.talk();
 
