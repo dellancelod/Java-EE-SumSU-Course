@@ -14,23 +14,25 @@ public class JsonDemo {
     public static void main(String[] args) {
         Character character1 = new Character("Player 1", new Paladin(), Stats.generate(), new Goblin());
 
-        ElementVisitor saver = new ElementVisitor();
+        ElementVisitor saver1 = new ElementVisitor();
 
-        character1.accept(saver);
-        character1.getRace().accept(saver);
-        character1.getCharacterClass().accept(saver);
-        character1.getStats().accept(saver);
+        character1.accept(saver1);
+        character1.getRace().accept(saver1);
+        character1.getCharacterClass().accept(saver1);
+        character1.getStats().accept(saver1);
 
-        TreeMap<String, String> treeMapCharacter1 = saver.getTreeMap();
+        TreeMap<String, String> treeMapCharacter1 = saver1.getTreeMap();
+
+        ElementVisitor saver2 = new ElementVisitor();
 
         Character character2 = new Character("Player 2", new Rogue(), Stats.generate(), new LightfootHalfling());
 
-        character2.accept(saver);
-        character2.getRace().accept(saver);
-        character2.getCharacterClass().accept(saver);
-        character2.getStats().accept(saver);
+        character2.accept(saver2);
+        character2.getRace().accept(saver2);
+        character2.getCharacterClass().accept(saver2);
+        character2.getStats().accept(saver2);
 
-        TreeMap<String, String> treeMapCharacter2 = saver.getTreeMap();
+        TreeMap<String, String> treeMapCharacter2 = saver2.getTreeMap();
 
         JsonSerialization jsonSerialization = new JsonSerialization();
         jsonSerialization.write("LW7-2/resources/characters.json", treeMapCharacter1, treeMapCharacter2);
