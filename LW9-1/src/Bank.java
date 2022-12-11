@@ -12,12 +12,4 @@ public class Bank {
             account -= 1;
         }
     }
-
-    public void setAccount(int account) {
-        this.account = account;
-    }
-
-    public int getAccount() {
-        return account;
-    }
 }
